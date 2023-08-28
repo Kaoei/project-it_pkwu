@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    padding: 60px;
+}
+
+.bg-img{
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    margin-top: -100px;
+    padding: 40vh;
+}
+
+.sub-title {
+    font-size: 25px;
+    margin-left: 8px;
+    font-family: 'montserrat';
+    font-weight: bold;
+  }
+  
+
+.main-title{
+    font-size: 100px;
+    margin-top: -35px;
+    font-family: 'montserrat';
+    font-weight: bold;
+}
+
+.title-container{
+    margin-left: 50px;
+}
+
+
+.img-content{
+    z-index: 1;
+}
+
+.title-content{
+    color:white;
+    position: absolute;
+    z-index: 2;
+    margin-top: -50px;
+    margin-left: 15px;
+}
+
+.footer{
+    padding: 10px;
+    margin: 0;
+}
+
+.daftar-menu{
+    height: 80vh;
+}
+
+
+
+.titlee {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.animate-on-scroll.animated .titlee {
+    animation: slideFromLeft 1s forwards;
+}
+
+@keyframes slideFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Animation for text to appear from the sides */
+.title-content {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Animation for images to appear from the top */
+.img-content {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+/* Animation when scrolled into view */
+.animate-on-scroll.animated .title-content {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.animate-on-scroll.animated .img-content {
+    animation: slideInFromTop 1s forwards;
+}
+
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-color: cyan;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; 
+}
+
+.container {
+    height: 100%; 
+    display: none;
+}
+
+.bg-form {
+    position: relative;
+    background-color: red;
+    overflow: hidden;
+    margin-left: 230px;
+    height: 100%; 
+}
+
+.left-content {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    bottom: 0;
+    width: 30%;
+    background-color: blue;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.form-content {
+    position: absolute;
+    top: 0;
+    right: 0; 
+    width: 50%; 
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid black;
+    height: 50px;
+}
+
+.form-content {
+    margin-top: 50px;
+}
+
+
+.bg-form.active {
+    right: 0; 
+    animation: slideInRight 3s forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.left-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-content {
+    flex: 2;
+    padding: 20px;
+}
+
+
